@@ -10,7 +10,7 @@ const Game = () => {
   const [score, setScore] = useState(0);
   const [ranking, setRanking] = useState([]);
   const [feedback, setFeedback] = useState('');
-  const [pressedKeys, setPressedKeys] = useState([]); // State para armazenar as teclas pressionadas
+  const [pressedKeys, setPressedKeys] = useState([]); 
   const correctSoundRef = useRef(null);
   const wrongSoundRef = useRef(null);
 
@@ -59,8 +59,7 @@ const Game = () => {
       if (!isGameOver && event.key.toUpperCase() === sequence[currentIndex]) {
         setCurrentIndex(prevIndex => prevIndex + 1);
         setFeedback('correct');
-        setPressedKeys(prevKeys => [...prevKeys, event.key.toUpperCase()]); // Atualiza as teclas pressionadas
-        if (correctSoundRef.current) {
+        setPressedKeys(prevKeys => [...prevKeys, event.key.toUpperCase()]); 
           correctSoundRef.current.audioEl.current.play();
         }
       } else if (!isGameOver && event.key.toUpperCase() !== sequence[currentIndex]) {
