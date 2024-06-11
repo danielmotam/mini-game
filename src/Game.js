@@ -87,7 +87,7 @@ const Game = () => {
     setMessage('');
     setScore(0);
     setFeedback('');
-    setPressedKeys([]); // Reinicia as teclas pressionadas
+    setPressedKeys([]); 
     const generateSequence = () => {
       const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
       let seq = [];
